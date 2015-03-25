@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @home.nombre %>
+</p>
+<%if userIsCoordinator == true%>
+<p>
+  <strong>Telefono:</strong>
+  <%= @home.telefono %>
+</p>
+<% end %>
+
+<p>
+  <strong>Hora:</strong>
+  <%= @home.hora %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @home.fecha %>
+</p>
+
+<%= link_to 'Editar', edit_home_path(@home) %> |
+<%= link_to 'Atras', homes_path %>

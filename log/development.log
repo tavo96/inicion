@@ -1,0 +1,2407 @@
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-17 21:22:47 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /var/lib/gems/1.9.1/gems/railties-4.0.2/lib/rails/templates/rails/welcome/index.html.erb (5.2ms)
+Completed 200 OK in 98ms (Views: 77.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (125.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (132.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20150318032728)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (24.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150318032728"]]
+  [1m[36m (143.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-17 21:34:45 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 1795ms (Views: 1746.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-17 21:34:48 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-17 21:34:48 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-17 21:34:48 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-17 21:34:48 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-17 21:34:48 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-17 21:34:48 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-17 21:34:48 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-17 21:34:48 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-17 21:34:48 -0600
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-17 21:34:52 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nKKCyEdMJu5NipzFknANFWdVIf4ZZ/H2GeFtsaFL6rU=", "email"=>"gustavo", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'gustavo' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 29ms (Views: 11.9ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-17 21:34:56 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nKKCyEdMJu5NipzFknANFWdVIf4ZZ/H2GeFtsaFL6rU=", "email"=>"gustavo", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'gustavo' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-17 21:34:57 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nKKCyEdMJu5NipzFknANFWdVIf4ZZ/H2GeFtsaFL6rU=", "email"=>"gustavo", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'gustavo' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2015-03-17 21:34:58 -0600
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (107.8ms)
+Completed 200 OK in 121ms (Views: 116.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-03-17 21:35:12 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nKKCyEdMJu5NipzFknANFWdVIf4ZZ/H2GeFtsaFL6rU=", "user"=>{"email"=>"gustavo@Unitec.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Crear usuario"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'gustavo@Unitec.edu' LIMIT 1
+Binary data inserted for `string` type on column `password_hash`
+Binary data inserted for `string` type on column `password_salt`
+  [1m[36mSQL (30.7ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_hash", "password_salt", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 18 Mar 2015 03:35:12 UTC +00:00], ["email", "gustavo@Unitec.edu"], ["password_hash", "$2a$10$faJzUCOIoIjfzm7V/fWD.ew6ktCymoxBRzaYsZc9zpTvx75vvpOqK"], ["password_salt", "$2a$10$faJzUCOIoIjfzm7V/fWD.e"], ["updated_at", Wed, 18 Mar 2015 03:35:12 UTC +00:00]]
+  [1m[35m (155.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 419ms (ActiveRecord: 186.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-17 21:35:12 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-17 21:35:18 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nKKCyEdMJu5NipzFknANFWdVIf4ZZ/H2GeFtsaFL6rU=", "email"=>"gustavo", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'gustavo' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 14ms (Views: 10.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-17 21:35:29 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nKKCyEdMJu5NipzFknANFWdVIf4ZZ/H2GeFtsaFL6rU=", "email"=>"gustavo@unitec.edu", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'gustavo@unitec.edu' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 16ms (Views: 13.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-17 21:35:29 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-17 21:35:29 -0600
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-17 21:35:31 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nKKCyEdMJu5NipzFknANFWdVIf4ZZ/H2GeFtsaFL6rU=", "email"=>"gustavo@unitec.edu", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'gustavo@unitec.edu' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 16ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-17 21:35:31 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-17 21:35:31 -0600
+
+
+Started GET "/log_in" for 127.0.0.1 at 2015-03-17 21:35:34 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-17 21:35:34 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-17 21:35:34 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-17 21:35:34 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-17 21:35:34 -0600
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2015-03-17 21:35:36 -0600
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-03-17 21:35:46 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nKKCyEdMJu5NipzFknANFWdVIf4ZZ/H2GeFtsaFL6rU=", "user"=>{"email"=>"Fran@unitec.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Crear usuario"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (1.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'Fran@unitec.edu' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_hash`
+Binary data inserted for `string` type on column `password_salt`
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "users" ("created_at", "email", "password_hash", "password_salt", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 18 Mar 2015 03:35:47 UTC +00:00], ["email", "Fran@unitec.edu"], ["password_hash", "$2a$10$X1xlm1FGxbok9SQMEkvp0e6/u1iamWz9ArWoM0aYKA5mm8PptqWKK"], ["password_salt", "$2a$10$X1xlm1FGxbok9SQMEkvp0e"], ["updated_at", Wed, 18 Mar 2015 03:35:47 UTC +00:00]]
+  [1m[36m (158.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 305ms (ActiveRecord: 160.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-17 21:35:47 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-17 21:35:47 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-17 21:35:47 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-17 21:35:47 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-17 21:35:47 -0600
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-17 21:36:03 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nKKCyEdMJu5NipzFknANFWdVIf4ZZ/H2GeFtsaFL6rU=", "email"=>"Fran@unitec.edu", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'Fran@unitec.edu' LIMIT 1
+Redirected to http://localhost:3000/lists
+Completed 302 Found in 147ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2015-03-17 21:36:03 -0600
+Processing by ListsController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant ListsController::List):
+  app/controllers/lists_controller.rb:7:in `index'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.1ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-17 21:37:12 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nKKCyEdMJu5NipzFknANFWdVIf4ZZ/H2GeFtsaFL6rU=", "email"=>"Fran@unitec.edu", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'Fran@unitec.edu' LIMIT 1[0m
+Redirected to http://localhost:3000/lists
+Completed 302 Found in 140ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/lists" for 127.0.0.1 at 2015-03-17 21:37:13 -0600
+Processing by ListsController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant ListsController::List):
+  app/controllers/lists_controller.rb:7:in `index'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.4ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-17 21:47:20 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'bin/rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.2) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.2) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:373:in `_run__994427628__call__callbacks'
+  activesupport (4.0.2) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.2) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateLists (20150318034406)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "lists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "numero" integer, "hora" time, "fecha" date, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (2.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150318034406"]]
+  [1m[36m (121.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateHomes (20150318034650)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "telefono" integer, "hora" time, "fecha" date, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20150318034650"]]
+  [1m[36m (170.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-17 21:47:42 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nKKCyEdMJu5NipzFknANFWdVIf4ZZ/H2GeFtsaFL6rU=", "email"=>"Fran@unitec.edu", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'Fran@unitec.edu' LIMIT 1
+Redirected to http://localhost:3000/homes
+Completed 302 Found in 181ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-17 21:47:43 -0600
+Processing by HomesController#index as HTML
+  [1m[36mHome Load (0.3ms)[0m  [1mSELECT "homes".* FROM "homes"[0m
+  Rendered homes/index.html.erb within layouts/application (6.8ms)
+  [1m[35mUser Load (6.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 618ms (Views: 607.7ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-17 21:47:44 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-17 21:47:44 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-17 21:47:44 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-17 21:47:44 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-17 21:47:44 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-17 21:47:44 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-17 21:47:44 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-17 21:47:44 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-17 21:47:44 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-17 21:47:44 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-17 21:47:44 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-17 21:47:44 -0600
+
+
+Started GET "/homes/new" for 127.0.0.1 at 2015-03-17 21:47:49 -0600
+Processing by HomesController#new as HTML
+  Rendered homes/_form.html.erb (143.9ms)
+  Rendered homes/new.html.erb within layouts/application (154.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 178ms (Views: 174.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/homes" for 127.0.0.1 at 2015-03-17 21:48:08 -0600
+Processing by HomesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nKKCyEdMJu5NipzFknANFWdVIf4ZZ/H2GeFtsaFL6rU=", "home"=>{"nombre"=>"gustavo", "telefono"=>"234567", "hora(1i)"=>"2015", "hora(2i)"=>"3", "hora(3i)"=>"18", "hora(4i)"=>"03", "hora(5i)"=>"00", "fecha(1i)"=>"2015", "fecha(2i)"=>"2", "fecha(3i)"=>"18"}, "commit"=>"Create Home"}
+WARNING: Can't mass-assign protected attributes for Home: nombre, telefono, hora(1i), hora(2i), hora(3i), hora(4i), hora(5i), fecha(1i), fecha(2i), fecha(3i)
+	app/controllers/homes_controller.rb:27:in `create'
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "homes" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Wed, 18 Mar 2015 03:48:08 UTC +00:00], ["updated_at", Wed, 18 Mar 2015 03:48:08 UTC +00:00]]
+  [1m[35m (551.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/homes/1
+Completed 302 Found in 567ms (ActiveRecord: 552.5ms)
+
+
+Started GET "/homes/1" for 127.0.0.1 at 2015-03-17 21:48:09 -0600
+Processing by HomesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHome Load (0.4ms)[0m  [1mSELECT "homes".* FROM "homes" WHERE "homes"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered homes/show.html.erb within layouts/application (1.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 17ms (Views: 13.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-17 21:48:09 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-17 21:48:09 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-17 21:48:09 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-17 21:48:09 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-17 21:48:09 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-17 21:48:09 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-17 21:48:09 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-17 21:48:09 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-17 21:48:09 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-17 21:48:09 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-17 21:48:09 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-17 21:48:09 -0600
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-17 21:48:12 -0600
+Processing by HomesController#index as HTML
+  [1m[36mHome Load (0.3ms)[0m  [1mSELECT "homes".* FROM "homes"[0m
+  Rendered homes/index.html.erb within layouts/application (3.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-17 21:49:29 -0600
+
+ActionController::RoutingError (No route matches [GET] "/homes"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (75.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-17 21:50:02 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 75ms (Views: 71.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:02 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:02 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:02 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:02 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:02 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:02 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:02 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:02 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:02 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:02 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:02 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:02 -0600
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-17 21:50:06 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nKKCyEdMJu5NipzFknANFWdVIf4ZZ/H2GeFtsaFL6rU=", "email"=>"gustavo", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'gustavo' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 20ms (Views: 14.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:06 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:06 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:06 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:06 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:06 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:06 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:06 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:06 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:07 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:07 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:07 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:07 -0600
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-17 21:50:18 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nKKCyEdMJu5NipzFknANFWdVIf4ZZ/H2GeFtsaFL6rU=", "email"=>"fran@unitec.edu", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'fran@unitec.edu' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 17ms (Views: 13.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:18 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:18 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:18 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:18 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:18 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:18 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:18 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:18 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:18 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:18 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:18 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:18 -0600
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-17 21:50:27 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nKKCyEdMJu5NipzFknANFWdVIf4ZZ/H2GeFtsaFL6rU=", "email"=>"gustavo@unitec.edu", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'gustavo@unitec.edu' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Completed 200 OK in 18ms (Views: 12.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:27 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:27 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:27 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:27 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:27 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:27 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:27 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:27 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:27 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:27 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:27 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:27 -0600
+
+
+Started GET "/log_out" for 127.0.0.1 at 2015-03-17 21:50:31 -0600
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-17 21:50:31 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:31 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:31 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:31 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:31 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-17 21:50:31 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:31 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:31 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:31 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:31 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:31 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:31 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-17 21:50:31 -0600
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-17 21:50:45 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nKKCyEdMJu5NipzFknANFWdVIf4ZZ/H2GeFtsaFL6rU=", "email"=>"Fran@unitec.edu", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'Fran@unitec.edu' LIMIT 1
+Redirected to http://localhost:3000/homes
+Completed 302 Found in 140ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-17 21:50:45 -0600
+
+ActionController::RoutingError (No route matches [GET] "/homes"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.3ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (46.0ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-17 21:51:04 -0600
+
+ActionController::RoutingError (No route matches [GET] "/homes"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (59.3ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (128.8ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-17 21:51:05 -0600
+
+ActionController::RoutingError (No route matches [GET] "/homes"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (48.5ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-17 21:51:38 -0600
+
+ActionController::RoutingError (No route matches [GET] "/homes"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.3ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (50.6ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-17 21:51:39 -0600
+
+ActionController::RoutingError (No route matches [GET] "/homes"):
+  actionpack (4.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.2) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.2) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.2) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.2) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.2) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.2) lib/rails/engine.rb:511:in `call'
+  railties (4.0.2) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (47.9ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-17 21:53:02 -0600
+Processing by HomesController#index as HTML
+  [1m[36mHome Load (0.5ms)[0m  [1mSELECT "homes".* FROM "homes"[0m
+  Rendered homes/index.html.erb within layouts/application (18.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 50ms (Views: 43.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-17 21:53:02 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-17 21:53:02 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-17 21:53:02 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-17 21:53:02 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-17 21:53:02 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-17 21:53:02 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-17 21:53:02 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-17 21:53:02 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-17 21:53:02 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-17 21:53:02 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-17 21:53:02 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-17 21:53:02 -0600
+
+
+Started GET "/homes/1/edit" for 127.0.0.1 at 2015-03-17 21:53:06 -0600
+Processing by HomesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHome Load (0.3ms)[0m  [1mSELECT "homes".* FROM "homes" WHERE "homes"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered homes/_form.html.erb (13.0ms)
+  Rendered homes/edit.html.erb within layouts/application (15.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 32ms (Views: 29.4ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/homes/1" for 127.0.0.1 at 2015-03-17 21:53:17 -0600
+Processing by HomesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nKKCyEdMJu5NipzFknANFWdVIf4ZZ/H2GeFtsaFL6rU=", "home"=>{"nombre"=>"gustavo", "telefono"=>"123", "hora(1i)"=>"2015", "hora(2i)"=>"3", "hora(3i)"=>"18", "hora(4i)"=>"03", "hora(5i)"=>"00", "fecha(1i)"=>"2015", "fecha(2i)"=>"3", "fecha(3i)"=>"18"}, "commit"=>"Update Home", "id"=>"1"}
+  [1m[36mHome Load (0.3ms)[0m  [1mSELECT "homes".* FROM "homes" WHERE "homes"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "homes" SET "nombre" = ?, "telefono" = ?, "hora" = ?, "fecha" = ?, "updated_at" = ? WHERE "homes"."id" = 1[0m  [["nombre", "gustavo"], ["telefono", 123], ["hora", 2015-03-18 03:00:00 UTC], ["fecha", Wed, 18 Mar 2015], ["updated_at", Wed, 18 Mar 2015 03:53:17 UTC +00:00]]
+  [1m[35m (252.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/homes/1
+Completed 302 Found in 270ms (ActiveRecord: 254.0ms)
+
+
+Started GET "/homes/1" for 127.0.0.1 at 2015-03-17 21:53:18 -0600
+Processing by HomesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHome Load (0.2ms)[0m  [1mSELECT "homes".* FROM "homes" WHERE "homes"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered homes/show.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-17 21:53:18 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-17 21:53:18 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-17 21:53:18 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-17 21:53:18 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-17 21:53:18 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-17 21:53:18 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-17 21:53:18 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-17 21:53:18 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-17 21:53:18 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-17 21:53:18 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-17 21:53:18 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-17 21:53:18 -0600
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-17 21:53:20 -0600
+Processing by HomesController#index as HTML
+  [1m[36mHome Load (0.3ms)[0m  [1mSELECT "homes".* FROM "homes"[0m
+  Rendered homes/index.html.erb within layouts/application (3.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 09:43:10 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 320ms (Views: 299.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 09:43:11 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-18 09:43:11 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-18 09:43:11 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-18 09:43:11 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-18 09:43:11 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-18 09:43:11 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-18 09:43:11 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-18 09:43:11 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-18 09:43:11 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-18 09:43:11 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-18 09:43:11 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-18 09:43:11 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-18 09:43:11 -0600
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-18 09:43:22 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ujRzH9p5SgfrJSnxOUlrVA5Tcg87mCEb1mbGaGbav4U=", "email"=>"gustavo", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'gustavo' LIMIT 1
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 58ms (Views: 11.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-18 09:43:22 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-18 09:43:22 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-18 09:43:22 -0600
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-18 09:43:34 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ujRzH9p5SgfrJSnxOUlrVA5Tcg87mCEb1mbGaGbav4U=", "email"=>"gustavo@unitec.edu", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'gustavo@unitec.edu' LIMIT 1[0m
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-18 09:43:34 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-18 09:43:34 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-18 09:43:34 -0600
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2015-03-18 09:43:38 -0600
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (78.2ms)
+Completed 200 OK in 112ms (Views: 109.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-18 09:43:38 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-18 09:43:38 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-18 09:43:38 -0600
+
+
+Started POST "/users" for 127.0.0.1 at 2015-03-18 09:43:50 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ujRzH9p5SgfrJSnxOUlrVA5Tcg87mCEb1mbGaGbav4U=", "user"=>{"email"=>"tavosuarez@unitec.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Crear usuario"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'tavosuarez@unitec.edu' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_hash`
+Binary data inserted for `string` type on column `password_salt`
+  [1m[35mSQL (82.4ms)[0m  INSERT INTO "users" ("created_at", "email", "password_hash", "password_salt", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 18 Mar 2015 15:43:50 UTC +00:00], ["email", "tavosuarez@unitec.edu"], ["password_hash", "$2a$10$SgZrL7.kZ7o14EDH6asgLOOHLBed0SmROVrfwBiVHiqA1wvEg9q6a"], ["password_salt", "$2a$10$SgZrL7.kZ7o14EDH6asgLO"], ["updated_at", Wed, 18 Mar 2015 15:43:50 UTC +00:00]]
+  [1m[36m (144.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 519ms (ActiveRecord: 227.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 09:43:50 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-18 09:43:51 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-18 09:43:51 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-18 09:43:51 -0600
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-18 09:44:00 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ujRzH9p5SgfrJSnxOUlrVA5Tcg87mCEb1mbGaGbav4U=", "email"=>"tavosuarez@unitec.edu", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'tavosuarez@unitec.edu' LIMIT 1
+Redirected to http://localhost:3000/homes
+Completed 302 Found in 140ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-18 09:44:00 -0600
+Processing by HomesController#index as HTML
+  [1m[36mHome Load (0.4ms)[0m  [1mSELECT "homes".* FROM "homes"[0m
+  Rendered homes/index.html.erb within layouts/application (23.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 69ms (Views: 34.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-18 09:44:00 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-18 09:44:00 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-18 09:44:00 -0600
+
+
+Started GET "/homes/1" for 127.0.0.1 at 2015-03-18 09:44:06 -0600
+Processing by HomesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHome Load (0.3ms)[0m  [1mSELECT "homes".* FROM "homes" WHERE "homes"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered homes/show.html.erb within layouts/application (2.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-18 09:44:09 -0600
+Processing by HomesController#index as HTML
+  [1m[36mHome Load (0.3ms)[0m  [1mSELECT "homes".* FROM "homes"[0m
+  Rendered homes/index.html.erb within layouts/application (4.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/homes/1/edit" for 127.0.0.1 at 2015-03-18 09:44:11 -0600
+Processing by HomesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHome Load (0.2ms)[0m  [1mSELECT "homes".* FROM "homes" WHERE "homes"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered homes/_form.html.erb (68.5ms)
+  Rendered homes/edit.html.erb within layouts/application (76.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 90ms (Views: 87.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-18 09:44:20 -0600
+Processing by HomesController#index as HTML
+  [1m[36mHome Load (0.3ms)[0m  [1mSELECT "homes".* FROM "homes"[0m
+  Rendered homes/index.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/homes/1" for 127.0.0.1 at 2015-03-18 09:44:39 -0600
+Processing by HomesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ujRzH9p5SgfrJSnxOUlrVA5Tcg87mCEb1mbGaGbav4U=", "id"=>"1"}
+  [1m[36mHome Load (0.2ms)[0m  [1mSELECT "homes".* FROM "homes" WHERE "homes"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mDELETE FROM "homes" WHERE "homes"."id" = ?[0m  [["id", 1]]
+  [1m[35m (147.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/homes
+Completed 302 Found in 161ms (ActiveRecord: 148.4ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-18 09:44:39 -0600
+Processing by HomesController#index as HTML
+  [1m[36mHome Load (0.3ms)[0m  [1mSELECT "homes".* FROM "homes"[0m
+  Rendered homes/index.html.erb within layouts/application (1.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-18 09:44:39 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-18 09:44:39 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-18 09:44:39 -0600
+
+
+Started GET "/homes/new" for 127.0.0.1 at 2015-03-18 09:46:04 -0600
+Processing by HomesController#new as HTML
+  Rendered homes/_form.html.erb (11.8ms)
+  Rendered homes/new.html.erb within layouts/application (14.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 09:49:49 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 44ms (Views: 41.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-18 09:49:50 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-18 09:49:50 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-18 09:49:50 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-18 09:49:50 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-18 09:49:50 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-18 09:49:50 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-18 09:49:50 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-18 09:49:50 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-18 09:49:50 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-18 09:49:50 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-18 09:49:50 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-18 09:49:50 -0600
+
+
+Started GET "/log_out" for 127.0.0.1 at 2015-03-18 09:49:56 -0600
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 09:49:56 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-18 09:50:03 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ujRzH9p5SgfrJSnxOUlrVA5Tcg87mCEb1mbGaGbav4U=", "email"=>"tavosuarez@unitec.edu", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'tavosuarez@unitec.edu' LIMIT 1[0m
+Redirected to http://localhost:3000/homes
+Completed 302 Found in 140ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-18 09:50:03 -0600
+Processing by HomesController#index as HTML
+  [1m[35mHome Load (0.4ms)[0m  SELECT "homes".* FROM "homes"
+  Rendered homes/index.html.erb within layouts/application (3.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 21ms (Views: 17.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-18 09:50:03 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-18 09:50:03 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-18 09:50:03 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-18 09:50:03 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-18 09:50:03 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-18 09:50:03 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-18 09:50:03 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-18 09:50:03 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-18 09:50:03 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-18 09:50:03 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-18 09:50:03 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-18 09:50:03 -0600
+
+
+Started GET "/homes/new" for 127.0.0.1 at 2015-03-18 09:50:24 -0600
+Processing by HomesController#new as HTML
+  Rendered homes/_form.html.erb (28.0ms)
+  Rendered homes/new.html.erb within layouts/application (29.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 49ms (Views: 45.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/homes" for 127.0.0.1 at 2015-03-18 09:50:44 -0600
+Processing by HomesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ujRzH9p5SgfrJSnxOUlrVA5Tcg87mCEb1mbGaGbav4U=", "home"=>{"nombre"=>"gustavo", "telefono"=>"1234121", "hora(1i)"=>"2015", "hora(2i)"=>"3", "hora(3i)"=>"18", "hora(4i)"=>"03", "hora(5i)"=>"00", "fecha(1i)"=>"2015", "fecha(2i)"=>"3", "fecha(3i)"=>"18"}, "commit"=>"Create Home"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "homes" ("created_at", "fecha", "hora", "nombre", "telefono", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Wed, 18 Mar 2015 15:50:44 UTC +00:00], ["fecha", Wed, 18 Mar 2015], ["hora", 2015-03-18 03:00:00 UTC], ["nombre", "gustavo"], ["telefono", 1234121], ["updated_at", Wed, 18 Mar 2015 15:50:44 UTC +00:00]]
+  [1m[36m (234.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/homes/2
+Completed 302 Found in 250ms (ActiveRecord: 235.9ms)
+
+
+Started GET "/homes/2" for 127.0.0.1 at 2015-03-18 09:50:44 -0600
+Processing by HomesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mHome Load (0.4ms)[0m  SELECT "homes".* FROM "homes" WHERE "homes"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered homes/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 21ms (Views: 17.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-18 09:50:45 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-18 09:50:45 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-18 09:50:45 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-18 09:50:45 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-18 09:50:45 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-18 09:50:45 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-18 09:50:45 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-18 09:50:45 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-18 09:50:45 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-18 09:50:45 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-18 09:50:45 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-18 09:50:45 -0600
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-18 09:50:56 -0600
+Processing by HomesController#index as HTML
+  [1m[35mHome Load (0.3ms)[0m  SELECT "homes".* FROM "homes"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered homes/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/homes/2" for 127.0.0.1 at 2015-03-18 09:50:59 -0600
+Processing by HomesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mHome Load (0.2ms)[0m  SELECT "homes".* FROM "homes" WHERE "homes"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered homes/show.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 16ms (Views: 13.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-18 09:51:00 -0600
+Processing by HomesController#index as HTML
+  [1m[35mHome Load (0.3ms)[0m  SELECT "homes".* FROM "homes"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered homes/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.5ms)
+  [1m[36m (119.5ms)[0m  [1mCREATE TABLE "homes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "telefono" integer, "hora" time, "fecha" date, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (132.5ms)[0m  CREATE TABLE "lists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nombre" varchar(255), "numero" integer, "hora" time, "fecha" date, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (131.6ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (131.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (132.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (107.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150318034650')[0m
+  [1m[35m (107.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150318034406')
+  [1m[36m (124.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150318032728')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 09:52:34 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (7.6ms)
+  [1m[35mUser Load (7.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 500 Internal Server Error in 224ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=3):
+  app/controllers/application_controller.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb___426374058__628184918'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 09:52:35 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 500 Internal Server Error in 16ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=3):
+  app/controllers/application_controller.rb:9:in `current_user'
+  app/views/layouts/application.html.erb:12:in `_app_views_layouts_application_html_erb___426374058__628184918'
+
+
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /var/lib/gems/1.9.1/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 09:53:53 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 168ms (Views: 149.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-18 09:53:54 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-18 09:53:54 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-18 09:53:54 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-18 09:53:54 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-18 09:53:54 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-18 09:53:54 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-18 09:53:54 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-18 09:53:54 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-18 09:53:54 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-18 09:53:54 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-18 09:53:54 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-18 09:53:54 -0600
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2015-03-18 09:54:06 -0600
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (72.5ms)
+Completed 200 OK in 91ms (Views: 82.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-03-18 09:54:18 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z7hsyZOinmorVmAFEPKw5u8Ty6Mava/27KVaMOSTZK0=", "user"=>{"email"=>"Tavosuarez", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Crear usuario"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'Tavosuarez' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_hash`
+Binary data inserted for `string` type on column `password_salt`
+  [1m[35mSQL (38.9ms)[0m  INSERT INTO "users" ("created_at", "email", "password_hash", "password_salt", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 18 Mar 2015 15:54:18 UTC +00:00], ["email", "Tavosuarez"], ["password_hash", "$2a$10$7IbJd0zS1IRTqCJFwU6uo.ZR4PufFEhAsBBwDErewWBYFjfthsFtW"], ["password_salt", "$2a$10$7IbJd0zS1IRTqCJFwU6uo."], ["updated_at", Wed, 18 Mar 2015 15:54:18 UTC +00:00]]
+  [1m[36m (146.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 353ms (ActiveRecord: 185.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 09:54:18 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-18 09:54:28 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z7hsyZOinmorVmAFEPKw5u8Ty6Mava/27KVaMOSTZK0=", "email"=>"Tavosuarez", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'Tavosuarez' LIMIT 1
+Redirected to http://localhost:3000/homes
+Completed 302 Found in 145ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-18 09:54:29 -0600
+Processing by HomesController#index as HTML
+  [1m[36mHome Load (0.3ms)[0m  [1mSELECT "homes".* FROM "homes"[0m
+  Rendered homes/index.html.erb within layouts/application (2.7ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 19ms (Views: 15.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/homes/new" for 127.0.0.1 at 2015-03-18 09:54:31 -0600
+Processing by HomesController#new as HTML
+  Rendered homes/_form.html.erb (79.9ms)
+  Rendered homes/new.html.erb within layouts/application (89.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 107ms (Views: 103.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-18 09:54:39 -0600
+Processing by HomesController#index as HTML
+  [1m[35mHome Load (0.3ms)[0m  SELECT "homes".* FROM "homes"
+  Rendered homes/index.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at 2015-03-18 09:54:41 -0600
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 09:54:41 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 09:56:34 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 145ms (Views: 123.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-18 09:56:39 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z7hsyZOinmorVmAFEPKw5u8Ty6Mava/27KVaMOSTZK0=", "email"=>"Tavosuarez", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'Tavosuarez' LIMIT 1
+Redirected to http://localhost:3000/homes
+Completed 302 Found in 165ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-18 09:56:39 -0600
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (8.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mHome Load (0.4ms)[0m  SELECT "homes".* FROM "homes"
+  Rendered homes/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 27ms (Views: 14.6ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/homes/new" for 127.0.0.1 at 2015-03-18 09:56:41 -0600
+Processing by HomesController#new as HTML
+  Rendered homes/_form.html.erb (101.6ms)
+  Rendered homes/new.html.erb within layouts/application (110.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 126ms (Views: 122.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-18 09:56:43 -0600
+Processing by HomesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mHome Load (0.3ms)[0m  [1mSELECT "homes".* FROM "homes"[0m
+  Rendered homes/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at 2015-03-18 09:56:45 -0600
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 09:56:45 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2015-03-18 09:56:48 -0600
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-03-18 09:57:02 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z7hsyZOinmorVmAFEPKw5u8Ty6Mava/27KVaMOSTZK0=", "user"=>{"email"=>"Fran1996@unitec.edu", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Crear usuario"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'Fran1996@unitec.edu' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_hash`
+Binary data inserted for `string` type on column `password_salt`
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "users" ("created_at", "email", "password_hash", "password_salt", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 18 Mar 2015 15:57:02 UTC +00:00], ["email", "Fran1996@unitec.edu"], ["password_hash", "$2a$10$bknW3jlqbZJRtt88XQTpreicONHpuG54t6BTqMPWzI.B0LQwefGnu"], ["password_salt", "$2a$10$bknW3jlqbZJRtt88XQTpre"], ["updated_at", Wed, 18 Mar 2015 15:57:02 UTC +00:00]]
+  [1m[36m (140.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 307ms (ActiveRecord: 142.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 09:57:02 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2015-03-18 09:57:15 -0600
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-03-18 09:57:22 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z7hsyZOinmorVmAFEPKw5u8Ty6Mava/27KVaMOSTZK0=", "user"=>{"email"=>"a", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Crear usuario"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'a' LIMIT 1[0m
+Binary data inserted for `string` type on column `password_hash`
+Binary data inserted for `string` type on column `password_salt`
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "users" ("created_at", "email", "password_hash", "password_salt", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Wed, 18 Mar 2015 15:57:22 UTC +00:00], ["email", "a"], ["password_hash", "$2a$10$IQe4EcY/V1kMotFO8mrmo.PAV6e49vaJgrkbWDLzdNQegLM8G5G6u"], ["password_salt", "$2a$10$IQe4EcY/V1kMotFO8mrmo."], ["updated_at", Wed, 18 Mar 2015 15:57:22 UTC +00:00]]
+  [1m[36m (139.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 282ms (ActiveRecord: 140.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 09:57:22 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-18 09:57:27 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z7hsyZOinmorVmAFEPKw5u8Ty6Mava/27KVaMOSTZK0=", "email"=>"a", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'a' LIMIT 1
+Redirected to http://localhost:3000/homes
+Completed 302 Found in 145ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-18 09:57:28 -0600
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mHome Load (0.4ms)[0m  SELECT "homes".* FROM "homes"
+  Rendered homes/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/homes/new" for 127.0.0.1 at 2015-03-18 09:57:29 -0600
+Processing by HomesController#new as HTML
+  Rendered homes/_form.html.erb (12.7ms)
+  Rendered homes/new.html.erb within layouts/application (14.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/homes" for 127.0.0.1 at 2015-03-18 09:57:42 -0600
+Processing by HomesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z7hsyZOinmorVmAFEPKw5u8Ty6Mava/27KVaMOSTZK0=", "home"=>{"nombre"=>"gustavo", "telefono"=>"1234", "hora(1i)"=>"2015", "hora(2i)"=>"3", "hora(3i)"=>"18", "hora(4i)"=>"03", "hora(5i)"=>"00", "fecha(1i)"=>"2015", "fecha(2i)"=>"3", "fecha(3i)"=>"18"}, "commit"=>"Create Home"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "homes" ("created_at", "fecha", "hora", "nombre", "telefono", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 18 Mar 2015 15:57:42 UTC +00:00], ["fecha", Wed, 18 Mar 2015], ["hora", 2015-03-18 03:00:00 UTC], ["nombre", "gustavo"], ["telefono", 1234], ["updated_at", Wed, 18 Mar 2015 15:57:42 UTC +00:00]]
+  [1m[35m (227.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/homes/1
+Completed 302 Found in 239ms (ActiveRecord: 228.8ms)
+
+
+Started GET "/homes/1" for 127.0.0.1 at 2015-03-18 09:57:42 -0600
+Processing by HomesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHome Load (0.3ms)[0m  [1mSELECT "homes".* FROM "homes" WHERE "homes"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered homes/show.html.erb within layouts/application (2.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 20ms (Views: 16.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-18 09:57:49 -0600
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mHome Load (0.3ms)[0m  SELECT "homes".* FROM "homes"
+  Rendered homes/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/homes/1" for 127.0.0.1 at 2015-03-18 09:57:55 -0600
+Processing by HomesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHome Load (0.2ms)[0m  [1mSELECT "homes".* FROM "homes" WHERE "homes"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered homes/show.html.erb within layouts/application (1.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-18 09:57:58 -0600
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mHome Load (0.3ms)[0m  SELECT "homes".* FROM "homes"
+  Rendered homes/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/homes/new" for 127.0.0.1 at 2015-03-18 09:58:05 -0600
+Processing by HomesController#new as HTML
+  Rendered homes/_form.html.erb (11.0ms)
+  Rendered homes/new.html.erb within layouts/application (12.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/homes" for 127.0.0.1 at 2015-03-18 09:58:15 -0600
+Processing by HomesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z7hsyZOinmorVmAFEPKw5u8Ty6Mava/27KVaMOSTZK0=", "home"=>{"nombre"=>"fran", "telefono"=>"2345", "hora(1i)"=>"2015", "hora(2i)"=>"3", "hora(3i)"=>"18", "hora(4i)"=>"02", "hora(5i)"=>"00", "fecha(1i)"=>"2015", "fecha(2i)"=>"3", "fecha(3i)"=>"18"}, "commit"=>"Create Home"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "homes" ("created_at", "fecha", "hora", "nombre", "telefono", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 18 Mar 2015 15:58:15 UTC +00:00], ["fecha", Wed, 18 Mar 2015], ["hora", 2015-03-18 02:00:00 UTC], ["nombre", "fran"], ["telefono", 2345], ["updated_at", Wed, 18 Mar 2015 15:58:15 UTC +00:00]]
+  [1m[35m (232.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/homes/2
+Completed 302 Found in 240ms (ActiveRecord: 233.2ms)
+
+
+Started GET "/homes/2" for 127.0.0.1 at 2015-03-18 09:58:16 -0600
+Processing by HomesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHome Load (0.2ms)[0m  [1mSELECT "homes".* FROM "homes" WHERE "homes"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered homes/show.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/homes/2" for 127.0.0.1 at 2015-03-18 09:58:55 -0600
+Processing by HomesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mHome Load (0.2ms)[0m  [1mSELECT "homes".* FROM "homes" WHERE "homes"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered homes/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 25ms (Views: 17.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-18 09:58:55 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-18 09:58:55 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-18 09:58:55 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-18 09:58:55 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-18 09:58:55 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-18 09:58:55 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-18 09:58:55 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-18 09:58:55 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-18 09:58:55 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-18 09:58:55 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-18 09:58:55 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-18 09:58:55 -0600
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-18 09:59:01 -0600
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mHome Load (0.3ms)[0m  SELECT "homes".* FROM "homes"
+  Rendered homes/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at 2015-03-18 09:59:07 -0600
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 09:59:07 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-18 09:59:14 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z7hsyZOinmorVmAFEPKw5u8Ty6Mava/27KVaMOSTZK0=", "email"=>"Tavosuarez", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'Tavosuarez' LIMIT 1[0m
+Redirected to http://localhost:3000/homes
+Completed 302 Found in 139ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-18 09:59:14 -0600
+Processing by HomesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mHome Load (0.4ms)[0m  [1mSELECT "homes".* FROM "homes"[0m
+  Rendered homes/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-18 09:59:14 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-18 09:59:14 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-18 09:59:15 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-18 09:59:15 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-18 09:59:15 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-18 09:59:15 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-18 09:59:15 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-18 09:59:15 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-18 09:59:15 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-18 09:59:15 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-18 09:59:15 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-18 09:59:15 -0600
+
+
+Started GET "/log_out" for 127.0.0.1 at 2015-03-18 09:59:52 -0600
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 09:59:52 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 10:46:40 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 413ms (Views: 388.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-18 10:46:42 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-18 10:46:42 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-18 10:46:42 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-18 10:46:42 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-18 10:46:42 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-18 10:46:42 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-18 10:46:42 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-18 10:46:42 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-18 10:46:42 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-18 10:46:42 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-18 10:46:42 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-18 10:46:42 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 10:47:44 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-18 10:47:45 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-18 10:47:45 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-18 10:47:45 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-18 10:47:45 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-18 10:47:45 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-18 10:47:45 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-18 10:47:45 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-18 10:47:45 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-18 10:47:45 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-18 10:47:45 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-18 10:47:45 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-18 10:47:45 -0600
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-18 10:51:19 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"84eXuUF70yQ+tdVAHxXDJpV4Fck91RJwdzKpTssDEvs=", "email"=>"Tavosuarez", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'Tavosuarez' LIMIT 1
+Redirected to http://localhost:3000/homes
+Completed 302 Found in 253ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-18 10:51:19 -0600
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (22.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mHome Load (0.3ms)[0m  SELECT "homes".* FROM "homes"
+  Rendered homes/index.html.erb within layouts/application (45.9ms)
+Completed 200 OK in 88ms (Views: 46.4ms | ActiveRecord: 23.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-18 10:51:19 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-18 10:51:19 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-18 10:51:19 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-18 10:51:19 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-18 10:51:19 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-18 10:51:19 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-18 10:51:19 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-18 10:51:19 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-18 10:51:19 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-18 10:51:20 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-18 10:51:20 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-18 10:51:20 -0600
+
+
+Started GET "/log_out" for 127.0.0.1 at 2015-03-18 10:51:25 -0600
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 10:51:25 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 10:55:07 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-18 10:55:07 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-18 10:55:07 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-18 10:55:07 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-18 10:55:07 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-18 10:55:07 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-18 10:55:07 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-18 10:55:07 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-18 10:55:07 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-18 10:55:07 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-18 10:55:07 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-18 10:55:07 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-18 10:55:07 -0600
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2015-03-18 10:57:48 -0600
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (122.7ms)
+Completed 200 OK in 141ms (Views: 139.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-03-18 10:58:56 -0600
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1SSEABIlyPGrfLHUzVi3TVsR68wYqum4gUSGi9haOe4=", "user"=>{"email"=>"lozano410@hotmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Crear usuario"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."email" = 'lozano410@hotmail.com' LIMIT 1
+Binary data inserted for `string` type on column `password_hash`
+Binary data inserted for `string` type on column `password_salt`
+  [1m[36mSQL (16.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "password_hash", "password_salt", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Wed, 18 Mar 2015 16:58:56 UTC +00:00], ["email", "lozano410@hotmail.com"], ["password_hash", "$2a$10$H8AeAeWh6t4j6XAenHyx/eDK45wP0hDx/K7P8MEi.JBJoKI7If9GC"], ["password_salt", "$2a$10$H8AeAeWh6t4j6XAenHyx/e"], ["updated_at", Wed, 18 Mar 2015 16:58:56 UTC +00:00]]
+  [1m[35m (118.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 376ms (ActiveRecord: 135.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 10:58:56 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-18 10:58:56 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-18 10:58:56 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-18 10:58:56 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-18 10:58:56 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-18 10:58:56 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-18 10:58:56 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-18 10:58:57 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-18 10:58:57 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-18 10:58:57 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-18 10:58:57 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-18 10:58:57 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-18 10:58:57 -0600
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-18 10:59:33 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1SSEABIlyPGrfLHUzVi3TVsR68wYqum4gUSGi9haOe4=", "email"=>"lozano410@hotmail.com", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'lozano410@hotmail.com' LIMIT 1[0m
+Redirected to http://localhost:3000/homes
+Completed 302 Found in 141ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-18 10:59:33 -0600
+Processing by HomesController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mHome Load (0.3ms)[0m  [1mSELECT "homes".* FROM "homes"[0m
+  Rendered homes/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-18 10:59:34 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-18 10:59:34 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-18 10:59:34 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-18 10:59:34 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-18 10:59:34 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-18 10:59:34 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-18 10:59:34 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-18 10:59:34 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-18 10:59:34 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-18 10:59:34 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-18 10:59:34 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-18 10:59:34 -0600
+
+
+Started GET "/homes/new" for 127.0.0.1 at 2015-03-18 10:59:55 -0600
+Processing by HomesController#new as HTML
+  Rendered homes/_form.html.erb (22.0ms)
+  Rendered homes/new.html.erb within layouts/application (52.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+Completed 200 OK in 80ms (Views: 78.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/homes" for 127.0.0.1 at 2015-03-18 11:00:21 -0600
+Processing by HomesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1SSEABIlyPGrfLHUzVi3TVsR68wYqum4gUSGi9haOe4=", "home"=>{"nombre"=>"los vengadores ", "telefono"=>"96220381", "hora(1i)"=>"2015", "hora(2i)"=>"3", "hora(3i)"=>"18", "hora(4i)"=>"16", "hora(5i)"=>"59", "fecha(1i)"=>"2015", "fecha(2i)"=>"3", "fecha(3i)"=>"18"}, "commit"=>"Create Home"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "homes" ("created_at", "fecha", "hora", "nombre", "telefono", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Wed, 18 Mar 2015 17:00:21 UTC +00:00], ["fecha", Wed, 18 Mar 2015], ["hora", 2015-03-18 16:59:00 UTC], ["nombre", "los vengadores "], ["telefono", 96220381], ["updated_at", Wed, 18 Mar 2015 17:00:21 UTC +00:00]]
+  [1m[36m (242.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/homes/3
+Completed 302 Found in 255ms (ActiveRecord: 243.5ms)
+
+
+Started GET "/homes/3" for 127.0.0.1 at 2015-03-18 11:00:22 -0600
+Processing by HomesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mHome Load (0.4ms)[0m  SELECT "homes".* FROM "homes" WHERE "homes"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered homes/show.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 68ms (Views: 65.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-18 11:00:22 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-18 11:00:22 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-18 11:00:22 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-18 11:00:22 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-18 11:00:22 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-18 11:00:22 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-18 11:00:22 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-18 11:00:22 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-18 11:00:22 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-18 11:00:22 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-18 11:00:22 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-18 11:00:22 -0600
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-18 11:00:31 -0600
+Processing by HomesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mHome Load (0.3ms)[0m  [1mSELECT "homes".* FROM "homes"[0m
+  Rendered homes/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at 2015-03-18 11:01:02 -0600
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 11:01:02 -0600
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-18 11:01:08 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1SSEABIlyPGrfLHUzVi3TVsR68wYqum4gUSGi9haOe4=", "email"=>"Tavosuarez", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'Tavosuarez' LIMIT 1
+Redirected to http://localhost:3000/homes
+Completed 302 Found in 139ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-18 11:01:09 -0600
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mHome Load (0.3ms)[0m  SELECT "homes".* FROM "homes"
+  Rendered homes/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-18 11:01:09 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-18 11:01:09 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-18 11:01:09 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-18 11:01:09 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-18 11:01:09 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-18 11:01:09 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-18 11:01:09 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-18 11:01:09 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-18 11:01:09 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-18 11:01:09 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-18 11:01:09 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-18 11:01:09 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-18 21:04:30 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 402ms (Views: 379.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-18 21:04:31 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-18 21:04:31 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-18 21:04:31 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-18 21:04:31 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-18 21:04:31 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-18 21:04:31 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-18 21:04:31 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-18 21:04:31 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-18 21:04:31 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-18 21:04:31 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-18 21:04:31 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-18 21:04:31 -0600
+
+
+Started POST "/sessions" for 127.0.0.1 at 2015-03-18 21:04:43 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+PEidqRi5caZyw2UWcHsDu2xIOGLMb19aWccjfxyCcU=", "email"=>"Tavosuarez", "password"=>"[FILTERED]", "commit"=>"Iniciar sesion"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'Tavosuarez' LIMIT 1
+Redirected to http://localhost:3000/homes
+Completed 302 Found in 258ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/homes" for 127.0.0.1 at 2015-03-18 21:04:43 -0600
+Processing by HomesController#index as HTML
+  [1m[36mUser Load (22.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mHome Load (0.4ms)[0m  SELECT "homes".* FROM "homes"
+  Rendered homes/index.html.erb within layouts/application (47.2ms)
+Completed 200 OK in 91ms (Views: 48.9ms | ActiveRecord: 23.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2015-03-18 21:04:43 -0600
+
+
+Started GET "/assets/homes.css?body=1" for 127.0.0.1 at 2015-03-18 21:04:43 -0600
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2015-03-18 21:04:43 -0600
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2015-03-18 21:04:43 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2015-03-18 21:04:43 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2015-03-18 21:04:43 -0600
+
+
+Started GET "/assets/sessions.css?body=1" for 127.0.0.1 at 2015-03-18 21:04:43 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2015-03-18 21:04:43 -0600
+
+
+Started GET "/assets/homes.js?body=1" for 127.0.0.1 at 2015-03-18 21:04:43 -0600
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2015-03-18 21:04:43 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2015-03-18 21:04:43 -0600
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2015-03-18 21:04:43 -0600
